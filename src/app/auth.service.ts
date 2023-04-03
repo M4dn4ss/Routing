@@ -1,5 +1,6 @@
 export class AuthService {
-    loggedIn = true;
+    loggedIn = false;
+    redirecUrl: string | undefined;
 
     isAuthenticated() {
         const promise = new Promise((resolve,reject) => {
