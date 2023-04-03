@@ -13,6 +13,8 @@ import { UserComponent } from './users/user/user.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
+import { AuthGuard } from './auth-guard.service';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -26,14 +28,15 @@ import { AdminModule } from './admin/admin.module';
     NotfoundComponent,
     ProductComponent,
     UserComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AdminModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
